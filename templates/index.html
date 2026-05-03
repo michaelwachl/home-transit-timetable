@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ theme }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="app">
+
+    <header id="header">
+      <div id="clock">--:--:--</div>
+      <div id="date-display">--</div>
+      <div id="status"></div>
+    </header>
+
+    <main id="main">
+
+      <section id="transit-section">
+        <div id="stops-container">
+          <div class="placeholder">Loading departures…</div>
+        </div>
+      </section>
+
+      <section id="weather-section">
+        <div id="weather-current">
+          <div class="placeholder">Loading weather…</div>
+        </div>
+        <div id="weather-forecast"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    const REFRESH_INTERVAL = {{ refresh_interval }} * 1000;
+  </script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
