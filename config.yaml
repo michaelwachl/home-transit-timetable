@@ -1,0 +1,27 @@
+# ── Transit stops ─────────────────────────────────────────────────────────────
+# Find your stop's global_id via: http://localhost:8080/api/stops/search?q=YourStop
+transit:
+  stops:
+    - global_id: "de:09162:70"   # Candidplatz U-Bahn
+      name: "Candidplatz"
+      lines: []                  # empty = all lines; e.g. ["U3", "U6", "58", "68"]
+      max_departures: 8
+
+    # Add more stops here if needed:
+    # - global_id: "de:09162:2"
+    #   name: "Marienplatz"
+    #   lines: ["U3", "U6"]
+    #   max_departures: 6
+
+# ── Weather ───────────────────────────────────────────────────────────────────
+# Uses Open-Meteo (free, no API key required)
+weather:
+  latitude: 48.1197
+  longitude: 11.5756
+  location_name: "Candidplatz, München"
+
+# ── Display ───────────────────────────────────────────────────────────────────
+display:
+  refresh_interval: 60   # seconds between data refreshes (30, 60, 120, …)
+  theme: "dark"           # "dark" or "light"
+  title: "Home Transit"
